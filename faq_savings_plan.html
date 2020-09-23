@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="js/ip.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+
+	
+</head>
+<style>
+
+br {
+            display: block; /* makes it have a width */
+            content: ""; /* clears default height */
+            margin-top: 5px; /* change this to whatever height you want it */
+}
+
+.button_link {
+  text-decoration: none !important;
+  color: #3B325F !important;
+  font-family: Poppins;
+}
+
+
+[data-filter-item] {
+  padding: 15px;
+  background-color: #ccc;
+  border: 1px solid #fff;
+}
+
+.hidden {
+  display: none;
+}
+.faq__ques__answer {
+  font-family: Poppins;
+}
+.faq__main__heading {
+  color: #3B325F;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.faq__question {
+  color: #3B325F;
+  font-family: Poppins;
+  font-weight: 800;
+
+}
+
+span {
+  color: #6E668A;
+  font-family: Poppins;
+  font-weight: 500;
+
+}
+
+.form-control::-webkit-input-placeholder { color: #AAA6BC; font-family: Poppins; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: #AAA6BC; font-family: Poppins; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: #AAA6BC; font-family: Poppins; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: #AAA6BC; font-family: Poppins; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: #AAA6BC;  font-family: Poppins;}  /* Microsoft Edge */
+.search_bar {
+  width: 60%;
+}
+
+
+body{
+background-image: url('img/mainbck_fnl.png');
+background-repeat: no-repeat;
+background-position: right -1000px top -1150px;
+
+    }
+
+
+
+.g_logo {
+    padding-left: 50px !important;
+  }
+
+
+@media (min-width: 300px) and (max-width: 992px) {
+  body {
+    /*background-image: url('img/mainbck_fn.png');*/
+background-repeat: no-repeat;
+background-position: right -1100px top -1070px;
+
+  }
+  .res_center {
+    text-align: center !important;
+  }
+  .g_logo {
+    padding-left: 0px !important;
+  }
+  .search_bar {
+  width: 90%;
+}
+.crd {
+  max-width: 100% !important;
+}
+.crd1 {
+  max-width: 100% !important;
+}
+/*.crd1 {
+  max-width: 100% !important;
+}*/
+
+.nv {
+  max-width: 100% !important;
+}
+
+.s {
+  width: 100% !important;
+}
+.search {
+  max-width: 90% !important;
+}
+#support {
+  text-align: left !important;
+  padding: 10px !important;
+}
+
+}
+
+.fotter_top {
+  	margin-top:100px !important;
+ 
+  }
+
+  .card2 {
+    margin-top: 15px;
+  }
+
+
+</style>
+<body>
+
+
+<div class="container nv" style="max-width: 87%;">
+	<nav class="navbar navbar-expand-lg navbar-light mt-3">
+   <a class="navbar-brand g_logo" href="https://test.1ounce.in/"><img src="img/logo.svg" class="logoClass" alt="logo" style="width: 75%;" ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color:#2DA3F2">
+    <span class="navbar-toggler-icon" style="font-size: 20px;color:#2DA3F2; "></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="font-family: Poppins;">
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item active pr-4">
+        <a class="nav-link nav_links" href="https://test.1ounce.in/" >Home</a>
+      </li>
+     
+
+       <li class="nav-item pr-4">
+        <a class="nav-link nav_links" href="#partner" >Partners</a>
+      </li>
+       <li class="nav-item pr-4">
+        <a class="nav-link nav_links" href="#userfeatures" >G-Feed</a>
+      </li>
+      
+       <li class="nav-item pr-4">
+        <a class="nav-link nav_links" href="#connect" >Connect</a>
+      </li>
+       <li class="nav-item pr-4">
+        <a class="nav-link nav_links" href="#" >Blog</a>
+      </li>
+      
+    </ul>
+</div>
+</nav>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+    <h4 id="support" style="color: #3B325F; font-weight: 600; font-size: 28px; font-family: Poppins;" class="mt-5 pl-5"><span style="font-weight: 100; color: #3B325F;">Goldlane</span> <span style="font-weight: 800; color: #3B325F;">Digital Gold faq</span></h4>
+      <div class="input-group mt-5 search pl-5" style="max-width: 75%;">
+      <input id="filter" class="form-control form-control-lg text-input" type="text" placeholder="Search"  style="border-right: 0px; box-shadow: none;">
+      <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon2" style="background-color: white;"><img src="img/Icon feather-search.png"></span>
+      </div>
+    </div>
+
+    <!-- <faq main> -->
+
+          <div class="faq__body pl-5 mt-5">
+        <div class="faq__main__heading">
+     <p><a href="#" style="text-decoration: none; color: #3B325F;">Savings plan</a></p>
+          
+           
+        </div>
+       
+           <div id="search" class="faq__ques__answer">
+              <div id="How can I start a savings plan through GoldLane" class="faq__question mt-4">
+                <p>1. How can I start a savings plan through GoldLane? <br> <span> <br>
+                  1. On the GoldLane  app tap savings plan to explore.<br>
+                  2.  GoldLane has created few plans for users according to their needs and convenience of investing in Gold.<br>
+                 3. You also have option to create a custom plans. </span></p>
+              </div>
+
+              <!-- <div class="faq__answer">
+                  <p>On the GoldLane app tap savings plan to explore.
+                   GoldLane has created few plans for users according to their needs and convenience of investing in Gold.<br>
+                 You also have option to create a custom plans.</p>
+              </div> -->
+            </div>
+
+            <div id="search" class="faq__ques__answer">
+              <div id="Is it possible to cancel my savings plan in between" class="faq__question mt-4">
+                <p>2. Is it possible to cancel my savings plan in between? <br> <span> <br> Yes. At GoldLane, we offer you the flexibility to withdraw your plan whenever you want. </span></p>
+              </div>
+
+              <!-- <div class="faq__answer">
+                  <p> Yes. At GoldLane, we offer you the flexibility to withdraw your plan whenever you want.</p>
+              </div> -->
+            </div>
+
+            <div id="search" class="faq__ques__answer">
+              <div id="Is there any cancellation charge" class="faq__question mt-4">
+                <p>3. Is there any cancellation charge? <br> <span> <br> No. There are no charges for cancellation of plans. </span></p>
+              </div>
+
+              <!-- <div class="faq__answer">
+                 <p>No. There are no charges for cancellation of plans.</p>
+              </div> -->
+            </div>
+
+            <div id="search" class="faq__ques__answer">
+              <div id="Is there any lock-in period for gold accumulated in a savings plan" class="faq__question mt-4">
+                <p>4. Is there any lock-in period for gold accumulated in a savings plan? <br> <span> <br> No. There is no lock-in period for gold accumulated in a savings plan. GoldLane only recommends to hold the accumulated gold for better returns. </span></p>
+              </div>
+
+              <!-- <div class="faq__answer">
+                 <p>No. There is no lock-in period for gold accumulated in a savings plan. GoldLane only recommends to hold the accumulated gold for better returns.</p>
+              </div> -->
+            </div>
+
+            <div id="search" class="faq__ques__answer">
+              <div id="Can I sell or Exchange gold accumulated before my plan gets completed" class="faq__question mt-4">
+                <p>5. Can I sell or Exchange gold accumulated before my plan gets completed? <br> <span> <br> Yes. Upon accumulating gold/silver in your Digital vault, you have the option to either exchange or sell it. </span></p>
+              </div>
+
+              <!-- <div class="faq__answer">
+                 <p>Yes. Upon accumulating gold/silver in your Digital vault, you have the option to either exchange or sell it.</p>
+              </div> -->
+            </div>
+
+            <div id="search" class="faq__ques__answer">
+              <div id="How accurate is Est. Gold Accumulation and Est. Growth predicted in the Savings Plan" class="faq__question mt-4">
+                <p>6. How accurate is Est. Gold Accumulation and Est. Growth predicted in the Savings Plan? <br> <span> <br> We use historical data to predict Estimated Gold Accumulation and Growth values. Please note that these values are only for reference purposes and the predictions may vary based on market conditions and other factors. Kindly read the Disclaimer before investing in a savings plan. </span></p>
+              </div>
+
+            </div>
+
+            <div id="search" class="faq__ques__answer">
+              <div id=" What are the payment options that support auto-payment in GoldLane savings plan" class="faq__question mt-4">
+                <p>7. What are the payment options that support auto-payment in GoldLane savings plan? <br> <span> <br><br> 
+                 1. All major credit cards are accepted for auto payments.<br>
+                  2. If you own Visa or MasterCard debit cards issued by ICICI Bank, Kotak Mahindra Bank, Citibank and Canara Bank then you can enjoy an automated recurring payment facility with just one-time authentication. </span></p>
+              </div>
+
+            
+            </div>
+
+             <div id="search" class="faq__ques__answer">
+              <div id="Does GoldLane support UPI based auto-payment" class="faq__question mt-4">
+                <p>8. Does GoldLane support UPI based auto-payment? <br> <span> <br> We are currently working on UPI based auto-payment option. You will be notified soon once we Implement it. </span></p>
+              </div>
+
+            </div>
+
+      
+
+    </div>
+
+ 
+    <!-- < End faq main> -->
+
+       
+    </div>
+
+ 
+
+
+
+
+
+  <div class="col-12 col-xl-5 col-lg-5 col-md-5 text-center">
+
+    <div class="button_group  text-left" style="margin-top: 60px;">
+      <button  type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="padding: 8px 13px 13px 13px; border-radius: 10px; font-size: 15px; box-shadow: none; font-family: Poppins"><span class="mr-3"><img  src="img/main_question.png"></span>Submit a query/complaint </button>
+      
+    </div>
+
+    <div class="quick__links  text-left mt-5">
+
+      <h4 class="mt-2 text-left" style="font-size: 28px; font-family: Poppins;color: #3B325F;">Quick <span style="font-weight: 800;  color: #3B325F;">Links</span></h4>
+
+      <div class="clickable_quick_links text-left">
+
+       <button type="button" class="btn btn-primary mt-2" style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 25px;  box-shadow: 5px 5px 15px 15px #F1F5F9;"><a class="button_link" href="faq_Account.html">Account</a></button>&nbsp
+
+       <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 20px;  box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-2"><a class="button_link" href="faq_Buying.html">Buying</a></button>&nbsp
+
+       <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 25px;  box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-2"><a href="faq_gifting.html" class="button_link">Gifting</a></button>
+
+       <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 20px;  box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-4"><a href="faq_Exchange.html" class="button_link">Exchanging at partner stores</a></button>&nbsp
+
+       <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 20px;  box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-4"><a href="kyc.html" class="button_link">KYC & Nominee</a></button>
+
+       <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 25px;  box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-4"><a href="faq_savings_plan.html" class="button_link">Savings plan</a></button>&nbsp
+
+       <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 25px;  box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-4"><a href="getting_delivered.html" class="button_link">Getting Physical Delivery</a></button>
+
+    
+
+       <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 20px; box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-4"><a href="faq_purity.html" class="button_link">Purety, Safety and Stroge of your Gold</a></button>
+
+        <button style="background-color: white; color: #3B325F; border: none; outline: none; border-radius: 5px; padding: 5px 20px; box-shadow: 5px 5px 15px 15px #F1F5F9;" type="button" class="btn btn-primary mt-4"><a href="faq_selling.html" class="button_link">Sellings</a></button>
+     
+        
+      </div>
+      
+    </div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+
+ 
+
+  
+   
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-family: Poppins;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <p class="text-center mt-3" style="color: #3B325F; font-weight: 700; font-size: 22px;">Submit Your Query</p>
+
+      <div class="modal-body p-4">
+        <form>
+
+          <div class="form-group mb-4">
+             <select id="profession" class="form-control input_field1 bol" style="border-radius: 10px; height: 43px; color: #AAA6BC;">
+
+              
+             </select>
+           
+         
+          </div>
+
+
+             <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span style="background-color: white; border-radius: 10px 0px 0px 10px;" class="input-group-text"><img src="img/Icon feather-phone.png"></span> 
+            </div>
+
+            <input type="text" id="phoneno" class="form-control" required placeholder="Your phone no" aria-label="Username" aria-describedby="basic-addon1" style="border-left: none !important; border-radius: 0px 10px 10px 0px; height: 43px;">
+          </div>
+
+           <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span style="background-color: white; border-radius: 10px 0px 0px 10px;" class="input-group-text"><img src="img/mail.png"></span> 
+            </div>
+
+            <input type="text" id="email" required class="form-control" placeholder="Your Email" aria-label="Username" aria-describedby="basic-addon1" style="border-left: none !important; border-radius: 0px 10px 10px 0px; height: 43px;">
+          </div>
+
+           <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span style="background-color: white; border-radius: 10px 0px 0px 10px;" class="input-group-text"><img class="mb-5" src="img/question.png"></span> 
+            </div>
+
+            <textarea required type="text" id="question" class="form-control" placeholder="Your Question" aria-label="Username" aria-describedby="basic-addon1" style="border-left: none !important; height: 100px; color: #AAA6BC; border-radius: 0px 10px 10px 0px; "></textarea>
+          </div>
+
+
+
+
+<div class="input-group mb-3">
+  
+  <div class="custom-file">
+    <input  type="file"  class="custom-file-input" id="file_to_upload" aria-describedby="inputGroupFileAddon01">
+    <label style="height: 38px; border-radius: 10px;" class="custom-file-label" for="inputGroupFile01"><span style="color: #AAA6BC;">Attach file</span></label>
+  </div>
+</div>
+       
+
+        </form>
+      </div>
+
+      <div class="modal-footer" style="display: flex; justify-content: flex-start; border-top: 0px;" >
+        <div>
+        <button id="complaint" onclick="complaint();" class="btn btn-primary" style="padding: 10px 30px; border-radius: 10px;">Submit  <span style="font-size: 8px; width: 18px; height:18px;" id="load_icon1"></span> 
+         </button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+	
+<script>
+  $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+
+
+$(document).ready(function() {
+  fetch(`${ip}report/category/`) 
+        .then(function(res){
+        return res.json()
+        })
+        .then(function(data){
+          console.log(data)
+          result(data)
+        })
+        .catch(function(err){
+          console.log("Something Wrong With the api Call"+err)
+        })
+        function result(data){
+          let options=" ";
+          profession = data;
+          options += `<option value="other">Choose category</option>`         
+
+          for(let i=0;i<profession.results.length;i++){
+          options += `<option value="${profession.results[i].title}">${profession.results[i].title}</option>`
+
+        }
+
+            
+            document.getElementById("profession").innerHTML = options;
+        }
+
+
+
+      })
+
+
+
+
+function complaint() {
+   $('#load_icon1').addClass('spinner-border text-light');
+    let catagory = document.getElementById("profession").value
+    let phoneno = document.getElementById("phoneno").value
+    let email = document.getElementById("email").value
+    let question = document.getElementById("question").value
+    let file_to_upload = document.getElementById("file_to_upload").files[0];
+    console.log(catagory);
+    console.log(phoneno);
+    console.log(email);
+    console.log(question);
+    console.log(file_to_upload);
+
+      var form = new FormData()
+    if(file_to_upload!=null){form.append("file",file_to_upload);}
+    form.append("category",catagory)
+    form.append("phone",phoneno)
+    form.append("email",email)
+    form.append("description",question)
+
+    $.ajax({
+      url:`${ip}report/support/`,
+      data:form,
+      type:"POST",
+      processData:false,
+      contentType:false,
+      success: function(response) {
+       toastr["success"]("Successfull")
+       $('#exampleModal').modal('hide')
+   $('#load_icon1').removeClass('spinner-border text-light');
+
+          console.log("response is ");
+          console.log("Success");
+          console.log(response);
+
+      },
+      error: function(response) {
+         toastr["error"]("Error")
+   $('#load_icon1').removeClass('spinner-border text-light');
+      
+
+        console.log(response)
+
+                // alert("Fail")
+
+           //console.log(response);
+                 alert("Fail");
+
+           }
+    })
+
+}
+
+
+function call_back() {
+$('#load_icon2').addClass('spinner-border text-light');
+    let catagory = document.getElementById("profession1").value
+    let phoneno = document.getElementById("phoneno1").value
+    let email = document.getElementById("email1").value
+   
+   
+    console.log(catagory);
+    console.log(phoneno);
+    console.log(email);
+    
+
+      var form = new FormData()
+   
+    form.append("category",catagory)
+    form.append("phone",phoneno)
+    form.append("email",email)
+   
+
+    $.ajax({
+      url:`${ip}report/support/`,
+      data:form,
+      type:"POST",
+      processData:false,
+      contentType:false,
+      success: function(response) {
+          toastr["success"]("Successfull")
+            $('#exampleModal2').modal('hide')
+$('#load_icon2').removeClass('spinner-border text-light');
+
+ 
+
+          console.log("response is ");
+          console.log("Success");
+          console.log(response);
+
+      },
+      error: function(response) {
+         toastr["error"]("Error")
+$('#load_icon2').removeClass('spinner-border text-light');
+
+
+
+  
+      
+
+        console.log(response)
+
+             
+
+           
+                 alert("Fail");
+
+           }
+    })
+
+
+
+
+
+  
+
+}
+
+
+  document.getElementById("complaint").disabled = true;
+      $("#profession,#phoneno,#email,#question,#file_to_upload").on("input", function() {
+      var profession = $("#profession").val().length;
+      var phoneno = $("#phoneno").val().length;
+      var email = $("#email").val().length;
+      var question = $("#question").val().length;
+      var file_to_upload = $("#file_to_upload").val().length;
+   
+          
+    
+      if(profession<=0 || phoneno<=0 || question<=0 || file_to_upload<=0 || email<=0){
+        document.getElementById("complaint").disabled = true;
+       } else{
+        document.getElementById("complaint").disabled = false;
+       }
+      })
+      
+
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("#filter").keyup(function(){
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+ 
+        // Loop through the comment list
+        $("#search p").each(function(){
+ 
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+               
+ 
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+ 
+        // Update the count
+        // var numberItems = count;
+        // $("#filter-count").text("Number of Comments = "+count);
+    });
+});
+</script>
+
+
+</body>
+</html>

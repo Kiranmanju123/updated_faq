@@ -1,0 +1,42 @@
+
+.main_text {
+	font-size: 13px;
+	color: #3B325F !important;
+	font-weight: 500 !important;
+}
+.main_heading {
+	font-size: 18px;
+	color: #3B325F !important;
+	font-weight: 700 !important;
+}
+.main_heading1 {
+	font-size: 26px;
+	color: #3B325F !important;
+	/*font-weight: 800 !important;*/
+}
+.team_photo {
+	 color: #AAA6BC !important;
+}
+.nav_links {
+	color: #3B325F !important;
+	font-weight: 500 !important;
+
+}
+.sm_img {
+		display: none;
+	}
+
+@media (min-width: 300px) and (max-width: 992px) {
+	.lg_img {
+		display: none;
+	}
+	.sm_img {
+		display: initial;
+		max-width: 100% !important;
+    }
+    .team {
+    	max-width: 100% !important;
+    }
+    
+}
+
