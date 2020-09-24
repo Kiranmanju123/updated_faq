@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <script src="js/ip.js"></script>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/ip.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
+
+
   
 
-	
+  
 </head>
 <style>
 
@@ -366,14 +368,13 @@ background-position: right -1100px top -1070px;
 
 
 
-
-<div class="input-group mb-3">
-  
-  <div class="custom-file">
-    <input  type="file"  class="custom-file-input" id="file_to_upload" aria-describedby="inputGroupFileAddon01">
-    <label style="height: 38px; border-radius: 10px;" class="custom-file-label" for="inputGroupFile01"><span style="color: #AAA6BC;">Attach file</span></label>
-  </div>
-</div>
+  <div class="input-group mb-3">
+    
+    <div class="custom-file">
+      <input  type="file"  class="custom-file-input" id="file_to_upload" aria-describedby="inputGroupFileAddon01">
+      <label id="filename" style="height: 38px; border-radius: 10px;" class="custom-file-label" for="inputGroupFile01"><span style="color: #AAA6BC;">Attach file</span></label>
+      <img width="50px;" style="margin-top: 150px;" id="blah"  />
+    </di
        
 
         </form>
@@ -576,6 +577,29 @@ $('#load_icon2').removeClass('spinner-border text-light');
         document.getElementById("complaint").disabled = false;
        }
       })
+
+
+        document.getElementById('file_to_upload').onchange = function () {
+        document.getElementById("filename").innerHTML = this.value;
+  // alert('Selected file: ' + this.value);
+};
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+
+$("#file_to_upload").change(function() {
+  readURL(this);
+});
       
 
 </script>
@@ -609,6 +633,12 @@ $('#load_icon2').removeClass('spinner-border text-light');
 });
 </script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 </body>
 </html>
