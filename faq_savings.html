@@ -16,6 +16,10 @@
 	
 </head>
 <style>
+
+    html {
+     scroll-behavior: smooth;
+  }
 br {
             display: block; /* makes it have a width */
             content: ""; /* clears default height */
@@ -455,7 +459,7 @@ $(document).ready(function() {
         return res.json()
         })
         .then(function(data){
-          console.log(data)
+          // console.log(data)
           result(data)
         })
         .catch(function(err){
